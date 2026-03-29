@@ -43,7 +43,7 @@ The comparison will be conducted across two benchmark datasets of increasing com
 MNIST and CIFAR-10. 
 
 Two main experiments will be performed:
-Experiment 1 - Performance: Both models will be evaluated on clean data to establish 
+Experiment 1- Performance: Both models will be evaluated on clean data to establish 
 baseline accuracy, training efficiency, and convergence behavior.
 
 Experiment 2- Robustness: Both models will be tested under controlled noise perturbations 
