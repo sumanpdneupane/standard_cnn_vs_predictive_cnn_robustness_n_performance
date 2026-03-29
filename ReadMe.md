@@ -67,6 +67,14 @@ Two main experiments will be performed:
 •	Experiment 2- Robustness: Both models will be tested under controlled noise perturbations 
     including Gaussian noise and Salt & Pepper noise at multiple controlled noise levels to 
     analyze performance degradation patterns under increasing noise conditions.
+    
+    Types of Degradations
+    SN  Type	                 Category	                    Example
+    1.  Gaussian Noise	          Noise	                  Random pixel variation
+    2.  Salt & Pepper	          Noise	                    Black/white pixels 
+    3.  Blur (Gaussian Blur)	 Distortion	        Smooths the image, reducing sharpness  
+                                                        and removing fine details
+                                                                                                        
 
 This research investigates the comparative performance and robustness of Standard CNN and PC-CNN 
 under controlled noise conditions, examining whether the iterative top-down inference mechanism 
