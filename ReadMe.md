@@ -1,5 +1,7 @@
 # Title: Performance and Robustness Analysis of Standard CNN and Predictive Coding CNN under Controlled Noise Perturbations
-### A Comparative Study of Performance and Robustness under Gaussian and Salt & Pepper Noise
+```
+A Comparative Study of Performance and Robustness under Gaussian and Salt & Pepper Noise
+```
 
 # Problem Trying to Solve
 ```
