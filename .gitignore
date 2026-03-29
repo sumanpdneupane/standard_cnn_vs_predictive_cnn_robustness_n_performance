@@ -45,10 +45,10 @@ tb_logs/
 *.pickle
 
 # Experiment outputs
-outputs/
-results/
-predictions/
-inference_outputs/
+#outputs/
+#results/
+#predictions/
+#inference_outputs/
 
 # Config & Secrets
 .env
