@@ -1,12 +1,5 @@
 # Performance and Robustness Analysis of Standard CNN and Predictive Coding CNN under Controlled Noise Perturbations
 
-# Research Question
-```
-1. Which has clean accuracy and performance PC-CNN or Standard CNN?
-2. Under Gaussian noise which is roubust?
-3. Under Salt and Paper noise which is roubust?
-```
-
 # Problem Trying to Solve
 ```
 Deep learning models, particularly Convolutional Neural Networks (CNNs), have achieved 
@@ -35,7 +28,17 @@ coding:
 •	Salvatori, Towards the Training of Deeper Predictive Coding Neural Networks, 2025
 ```
 
-# How Research Solves It
+# Research Question
+```
+1.  How do Standard CNN and PC-CNN compare in baseline performance on 
+    clean datasets?
+2.  How do Standard CNN and PC-CNN compare in robustness under Gaussian 
+    noise perturbations?
+3.  How do Standard CNN and PC-CNN compare in robustness under Salt & Pepper 
+    noise perturbations?
+```
+
+# Methodology- How Research Solves It
 ```
 This research implements and compares two models:
 •	Standard CNN trained using backpropagation
@@ -59,6 +62,42 @@ noisy conditions, examining whether the iterative top-down inference mechanism o
 offers advantages over the single forward pass used in standard CNNs.
 ```
 
+# Experimental Design
+## Evaluation Metrics
+```
+The following metrics will be used to evaluate model performance:
+•   Accuracy: Overall classification correctness
+•   Robustness Score: Rate of performance degradation under increasing noise levels
+•   Convergence Speed: Number of epochs required to reach stable performance
+•   Loss Function Behavior: Training stability and optimization efficiency
+
+Additionally, performance degradation curves (Accuracy vs Noise Level) will be plotted 
+to compare robustness between models.
+```
+
+## Experimental Fairness
+```
+To ensure a fair comparison between Standard CNN and PC-CNN:
+•   Both models will use identical architectures (where applicable)
+•   Same datasets and preprocessing steps will be applied
+•   Training hyperparameters (epochs, batch size, learning rate) will be aligned 
+    as closely as possible
+•   Evaluation will be conducted under identical noise conditions
+
+This ensures that differences in performance are attributable to learning mechanisms 
+rather than experimental bias.
+```
+
+## Expected Outputs
+```
+•   Accuracy vs Noise Level graphs for both Gaussian and Salt & Pepper noise
+•   Comparative performance tables across all noise levels
+•   Visualization of noisy inputs across datasets
+•   Analysis of performance degradation patterns
+
+These outputs will provide both quantitative and visual evidence of model robustness.
+```
+
 # Languages, Frameworks and Tools
 ```
 Tool            Purpose
@@ -72,7 +111,15 @@ Training        Google Colab (NVIDIA T4) / MacBook M3 Pro (18GB) Model
 GitHub          Version control and code sharing
 ```
 
-# How This Research is Unique
+# High Computation Requirement
+```
+Two hardware environments will be used: a MacBook M3 Pro (18GB, MPS backend) for debugging 
+and smaller experiments, and Google Colab T4 GPU (CUDA) for larger experiments and final 
+runs, with actual running times varying depending on dataset size, hyperparameters, and 
+hardware performance. 
+```
+
+# Contribution / Novelty - How This Research is Unique
 ```
 Globally: 
 Predictive Coding Networks are an emerging research area with key papers published 
@@ -93,12 +140,4 @@ brain-inspired artificial intelligence.
 
 The findings may also inform future research on energy-efficient AI systems, which is 
 particularly relevant for resource-constrained computing environments.
-```
-
-# High Computation Requirement
-```
-Two hardware environments will be used: a MacBook M3 Pro (18GB, MPS backend) for debugging 
-and smaller experiments, and Google Colab T4 GPU (CUDA) for larger experiments and final 
-runs, with actual running times varying depending on dataset size, hyperparameters, and 
-hardware performance. 
 ```
