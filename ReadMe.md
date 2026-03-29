@@ -72,7 +72,8 @@ Two main experiments will be performed:
     SN  Type                 Category     Example
     1.  Gaussian Noise       Noise        Random pixel variation
     2.  Salt & Pepper        Noise        Black/white pixels
-    3.  Blur (Gaussian Blur) Distortion   Smooths the image, reducing sharpness and removing fine details                  
+    3.  Blur (Gaussian Blur) Distortion   Smooths the image, reducing sharpness and 
+                                          removing fine details                  
 
 This research investigates the comparative performance and robustness of Standard CNN and PC-CNN 
 under controlled noise conditions, examining whether the iterative top-down inference mechanism 
