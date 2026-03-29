@@ -28,8 +28,16 @@ coding:
 •	Salvatori, Towards the Training of Deeper Predictive Coding Neural Networks, 2025
 ```
 
+# Why Predictive Coding?
+```
+Because standard CNNs rely on a single forward pass and are sensitive to noise, whereas 
+predictive coding uses iterative error correction, which may improve robustness under 
+noisy conditions.
+```
+
 # Research Question
 ```
+Based on the identified research gap, the following research questions are formulated:
 1.  How do Standard CNN and PC-CNN compare in baseline performance on 
     clean datasets?
 2.  How do Standard CNN and PC-CNN compare in robustness under Gaussian 
@@ -57,13 +65,16 @@ Two main experiments will be performed:
     including Gaussian noise and Salt & Pepper noise at multiple controlled noise levels to 
     analyze performance degradation patterns under increasing noise conditions.
 
-This research investigates which model demonstrates better performance and robustness under 
-noisy conditions, examining whether the iterative top-down inference mechanism of PC-CNN 
-offers advantages over the single forward pass used in standard CNNs.
+This research investigates the comparative performance and robustness of Standard CNN and PC-CNN 
+under controlled noise conditions, examining whether the iterative top-down inference mechanism 
+of PC-CNN offers advantages over the single forward pass used in standard CNNs.
 ```
 
 # Experimental Design
-## Evaluation Metrics
+```
+To ensure a structured and scientifically valid comparison, the experimental design is defined as follows:
+```
+### Evaluation Metrics
 ```
 The following metrics will be used to evaluate model performance:
 •   Accuracy: Overall classification correctness
@@ -75,7 +86,7 @@ Additionally, performance degradation curves (Accuracy vs Noise Level) will be p
 to compare robustness between models.
 ```
 
-## Experimental Fairness
+### Experimental Fairness
 ```
 To ensure a fair comparison between Standard CNN and PC-CNN:
 •   Both models will use identical architectures (where applicable)
@@ -88,7 +99,7 @@ This ensures that differences in performance are attributable to learning mechan
 rather than experimental bias.
 ```
 
-## Expected Outputs
+### Expected Outputs
 ```
 •   Accuracy vs Noise Level graphs for both Gaussian and Salt & Pepper noise
 •   Comparative performance tables across all noise levels
