@@ -11,13 +11,13 @@ def plot_difficulty_comparison(datasets_info, save=False):
     """
     fig, axes = plt.subplots(1, len(datasets_info), figsize=(10, 3))
     fig.suptitle(
-        "Section 6.1 & 6.2 — Image Clarity and Grayscale vs Color",
+        "Image Clarity and Grayscale vs Color",
         fontsize=12, fontweight='bold'
     )
 
     for i, (dataset, ds_name, color_label) in enumerate(datasets_info):
         img, label = dataset[0]
-        img_np     = img.numpy()
+        img_np = img.numpy()
 
         if img_np.shape[0] == 1:
             axes[i].imshow(img_np.squeeze(), cmap='gray')
@@ -36,22 +36,18 @@ def plot_difficulty_comparison(datasets_info, save=False):
     plt.tight_layout()
     plt.show()
     if save:
-        plt.savefig("section6_difficulty_comparison.png",
+        plt.savefig("section5_difficulty_comparison.png",
                     dpi=150, bbox_inches='tight')
-        print("Saved: section6_difficulty_comparison.png")
+        print("Saved: section5_difficulty_comparison.png")
 
 
 def plot_complexity_table(save=False):
-    """
-    Section 6.3
-    Justification table for increasing complexity order
-    """
     data = [
-        ["MNIST",         "28×28", "1",  "Grayscale", "Digits 0-9",
-         "Clean, high contrast",          "Easy",   "1st"],
-        ["Fashion-MNIST", "28×28", "1",  "Grayscale", "Clothing items",
-         "Similar size, complex shapes",  "Medium", "2nd"],
-        ["CIFAR-10",      "32×32", "3",  "Color",     "Natural objects",
+        ["MNIST", "28×28", "1", "Grayscale", "Digits 0-9",
+         "Clean, high contrast", "Easy", "1st"],
+        ["Fashion-MNIST", "28×28", "1", "Grayscale", "Clothing items",
+         "Similar size, complex shapes", "Medium", "2nd"],
+        ["CIFAR-10", "32×32", "3", "Color", "Natural objects",
          "Real photos, cluttered background", "Hard", "3rd"],
     ]
 
@@ -64,10 +60,10 @@ def plot_complexity_table(save=False):
     ax.axis('off')
 
     table = ax.table(
-        cellText  = data,
-        colLabels = columns,
-        loc       = 'center',
-        cellLoc   = 'center'
+        cellText=data,
+        colLabels=columns,
+        loc='center',
+        cellLoc='center'
     )
 
     table.auto_set_font_size(False)
@@ -95,13 +91,12 @@ def plot_complexity_table(save=False):
         table[row, diff_col_idx].set_facecolor(diff_colors[diff_val])
 
     plt.title(
-        "Section 6.3 — Justification of Increasing Complexity Order",
+        "Justification of Increasing Complexity Order",
         fontsize=12, fontweight='bold', pad=20
     )
     plt.tight_layout()
     plt.show()
     if save:
-        plt.savefig("section6_complexity_table.png",
+        plt.savefig("section5_complexity_table.png",
                     dpi=150, bbox_inches='tight')
-        print("Saved: section6_complexity_table.png")
-
+        print("Saved: section5_complexity_table.png")

@@ -55,7 +55,7 @@ def plot_dataset_summary_table(rows, save=False):
         color = '#d0e8f1' if type_val == "Grayscale" else '#fde8c8'
         table[row, type_col_idx].set_facecolor(color)
 
-    plt.title("Section 1 — Dataset Summary",
+    plt.title("Dataset Summary",
               fontsize=12, fontweight='bold', pad=20)
     plt.tight_layout()
     if save:
@@ -103,7 +103,7 @@ def plot_class_names_table(rows, save=False):
         table[row, 0].set_text_props(fontweight='bold')
         table[row, 0].set_facecolor('#d0e8f1')
 
-    plt.title("Section 1 — Class Names per Dataset",
+    plt.title("Class Names per Dataset",
               fontsize=12, fontweight='bold', pad=20)
     plt.tight_layout()
     if save:

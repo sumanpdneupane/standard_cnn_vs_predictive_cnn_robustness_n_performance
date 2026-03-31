@@ -12,7 +12,7 @@ def get_pixels(dataset):
 
 def plot_pixel_histograms(datasets_info, save=False):
     fig, axes = plt.subplots(1, len(datasets_info), figsize=(18, 4))
-    fig.suptitle("Section 4 — Pixel Value Distribution",
+    fig.suptitle("Pixel Value Distribution",
                  fontsize=13, fontweight='bold')
 
     for i, (dataset, name, color) in enumerate(datasets_info):
@@ -28,7 +28,7 @@ def plot_pixel_histograms(datasets_info, save=False):
                         linewidth=1.5, label=f'Std:  {std:.3f}')
         axes[i].axvline(mean - std, color='orange', linestyle=':',
                         linewidth=1.5)
-        axes[i].set_title(f"4.{i+1}  {name}", fontsize=11, fontweight='bold')
+        axes[i].set_title(f"{name}", fontsize=11, fontweight='bold')
         axes[i].set_xlabel("Pixel Value", fontsize=9)
         axes[i].set_ylabel("Frequency",   fontsize=9)
         axes[i].legend(fontsize=8)
@@ -98,7 +98,7 @@ def plot_pixel_stats_table(data, save=False):
         table[row, 0].set_text_props(fontweight='bold')
         table[row, 0].set_facecolor('#d0e8f1')
 
-    plt.title("Section 4.4 — Mean and Standard Deviation per Dataset",
+    plt.title("Mean and Standard Deviation per Dataset",
               fontsize=12, fontweight='bold', pad=20)
     plt.tight_layout()
     plt.show()
